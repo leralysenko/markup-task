@@ -1,0 +1,48 @@
+.news {
+  display: flex;
+  flex-wrap: wrap;
+}
+.news .article, .news .article--valid {
+  width: 100%;
+  position: relative;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 20px 30px 0px;
+}
+.news .article--wide {
+  width: 100%;
+}
+.news .article--valid {
+  border: 2px solid green;
+}
+.news .article--valid .point {
+  position: absolute;
+  display: flex;
+  top: 0px;
+  right: 0px;
+  background-color: green;
+  border-radius: 36px;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.news .article img, .news .article--valid img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .news .article, .news .article--valid {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .news .article, .news .article--valid {
+    width: calc(25% - 20px);
+  }
+}

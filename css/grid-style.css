@@ -1,0 +1,50 @@
+.news {
+  display: grid;
+}
+.news .article, .news .article--valid {
+  width: 100%;
+  position: relative;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+.news .article--valid {
+  border: 2px solid green;
+}
+.news .article--valid .point {
+  position: absolute;
+  display: grid;
+  top: 0px;
+  right: 0px;
+  background-color: green;
+  border-radius: 36px;
+  width: 60px;
+  height: 60px;
+  justify-items: center;
+  align-items: center;
+}
+.news .article img, .news .article--valid img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .news {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news .article--wide {
+    grid-column: span 2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .news {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .news .article--wide {
+    grid-column: span 4;
+  }
+}

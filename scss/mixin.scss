@@ -1,0 +1,26 @@
+@mixin media-breakpoint($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+    
+}
+
+@mixin media-breakpoint-up($width) {
+    @include media-breakpoint($width);
+}
+
+@mixin custom-border($brdClr, $brdRds: 50%) {
+    border: 1px solid $brdClr;
+    border-radius: $brdRds;
+}
+
+.news {
+    @include media-breakpoint(768px) {
+        margin: 10px 20px;
+        padding: 12px;
+    }
+    @include media-breakpoint(1024px) {
+        margin: 10px 30px;
+        padding: 20px;
+    }
+}
